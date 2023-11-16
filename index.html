@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Example | Navbar</title>
+</head>
+
+<body class="bg-slate-800">
+  <!-- Desktop Navbar -->
+  <nav class="hidden lg:flex bg-slate-700 px-20 py-4 mb-10">
+    <ul class="flex gap-8 text-white text-xl font-medium ">
+      <li class="cursor-pointer">Home</li>
+      <li class="cursor-pointer">Contact Us</li>
+      <li class="cursor-pointer">Products</li>
+      <li class="cursor-pointer">Help</li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Navbar -->
+  <nav class="lg:hidden bg-slate-700 px-5 py-4 mb-10">
+    <div class="flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">Navbar</h1>
+      <button id="nav-toggle" class="right-2 z-10 absolute text-white text-2xl focus:outline-none">
+        <img id="button-open" data-open="false" src="./assets/menu.svg" class="data-[open=true]:hidden" width="40"
+          alt="">
+        <img id="button-close" data-close="true" src="./assets/close.svg" class="data-[close=true]:hidden" width="40"
+          alt="">
+      </button>
+
+      <ul data-visible="false" id="nav-menu"
+        class="ease-out duration-300 data-[visible=false]:translate-x-full ul-nav fixed flex flex-col top-0 right-0 bg-slate-700 h-screen py-32 px-24 gap-8 text-white text-xl font-medium ">
+        <li class="cursor-pointer">Home</li>
+        <li class="cursor-pointer">Contact Us</li>
+        <li class="cursor-pointer">Products</li>
+        <li class="cursor-pointer">Help</li>
+      </ul>
+  </nav>
+
+  <main class="px-5 md:px-20">
+    <h1 class="text-3xl font-bold text-white underline">
+      Hello world!
+    </h1>
+    <p class="mt-10 text-white font-medium">
+      This is an example of how to make a responsive navigation bar with tailwind,
+      html and
+      javascript
+    </p>
+  </main>
+</body>
+<script src="/script/navbar.js"></script>
+
+</html>
